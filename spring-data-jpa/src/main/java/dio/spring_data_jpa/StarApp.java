@@ -14,6 +14,10 @@ public class StarApp implements CommandLineRunner{
 
     @Autowired
     private UserRespository repository;
+
+    @Autowired
+    private User user;
+    
     @Override
     public void run(String... args) throws Exception {
         //insert();
@@ -25,7 +29,6 @@ public class StarApp implements CommandLineRunner{
 
     public  void insert(){
         Scanner s = new Scanner(System.in);
-        User user = new User();
 
         System.out.println("Digite seu nome: ");
         String nome = s.nextLine();
